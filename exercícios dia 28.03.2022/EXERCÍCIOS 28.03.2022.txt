@@ -1,0 +1,164 @@
+EXERCÍCIO 1
+
+programa
+{
+	inclua biblioteca ServicosWeb
+	
+	funcao inicio()
+	{
+		inteiro valores[5], n, maiorPont=0
+
+		para (n=0;n<=4;n++)
+		{
+			escreva("Entre com a pontuação ",n+1,": ")
+			leia(valores[n])	
+
+			se(valores[n]>maiorPont)
+			{
+			maiorPont=valores[n]
+			}
+		}
+		para (n=0;n<5;n++)
+		{
+			escreva("\n\nValor pontuação ",n+1,": ",valores[n])
+		}
+			
+			escreva("\n\nA maior pontuação é "+maiorPont+".")	
+	}
+	
+}
+
+
+
+EXERCÍCIO 2
+
+programa
+{
+	inclua biblioteca Matematica
+	inclua biblioteca Util
+	
+	funcao inicio()
+	{
+		inteiro dado[10],num, soma=0, maiorNum=0, contador=0
+
+		escreva("Os números sorteados são: \n")
+		
+		para(num=0;num<=9;num++)
+		{
+			dado[num]=Util.sorteia(1, 6)
+			escreva("\n"+dado[num])
+
+			soma=soma+num	
+		}
+		para(num=0;num<=9;num++)
+		{
+				se(dado[num]>maiorNum)
+				{
+					maiorNum=dado[num]
+				}
+		}
+		para(num=0;num<=9;num++)
+		{
+			se(dado[num]==maiorNum)
+			{
+				contador++
+			}
+		}
+		escreva("\n\nA média dos lançamentos é: "+soma/10)
+		escreva("\nA quantidade de vezes que o maior número apareceu: "+ contador)  
+	}
+}
+
+
+EXERCÍCIO 3 
+
+
+programa
+{
+	inclua biblioteca Util
+	
+	funcao inicio()
+	{
+		inteiro N1[4][6], N2[4][6], M1[4][6], M2[4][6], linha, coluna, num
+
+		para(linha=0;linha<4;linha++)
+		{
+			para(coluna=0;coluna<6;coluna++)
+			{
+				num=Util.sorteia(1, 9)
+				N1[linha][coluna]=num
+			}
+		}
+		para(linha=0;linha<4;linha++)
+		{
+			para(coluna=0;coluna<6;coluna++)
+			{
+				num=Util.sorteia(1, 9)
+				N2[linha][coluna]=num
+			}
+		}
+
+		para(linha=0;linha<4;linha++)
+		{
+			para(coluna=0;coluna<6;coluna++)
+			{
+				M1[linha][coluna]=N1[linha][coluna]+N2[linha][coluna]
+				escreva(M1[linha][coluna],"\t")
+			}
+		escreva("\n")
+		}
+		escreva("\n")
+		
+		para(linha=0;linha<4;linha++)
+		{
+			para(coluna=0;coluna<6;coluna++)
+			{
+				M2[linha][coluna]=N1[linha][coluna]+N2[linha][coluna]
+				escreva(M2[linha][coluna]+"\t")
+			}
+		escreva("\n")
+		}	
+	}
+}
+
+
+EXERCÍCIO 4
+
+programa
+
+{
+	inclua biblioteca Util
+
+	funcao inicio()
+	{
+		const inteiro TAMANHO=3
+		inteiro matriz[TAMANHO][3], linha, coluna, soma=0, soma1=0
+		
+
+		para(linha=0;linha<TAMANHO;linha++)
+		{
+			para(coluna=0;coluna<3;coluna++)
+			{
+				escreva(" Digite um número: ")
+				leia(matriz[linha][coluna])
+				soma=soma+matriz[linha][coluna]
+				soma1=matriz[0][0]+matriz[1][1]+matriz[2][2]			
+			}
+			
+		}
+		para(linha=0;linha<TAMANHO;linha++)
+		{
+			para(coluna=0;coluna<3;coluna++)
+			{
+				escreva("["+matriz[linha][coluna]+"]")		
+			}	
+		escreva("\n")
+		}
+		
+		escreva("\nA soma é: "+soma+".\n")
+		escreva("\n\nA soma dos números diagonais é: "+soma1+".\n")
+		}	
+		
+	}
+
+

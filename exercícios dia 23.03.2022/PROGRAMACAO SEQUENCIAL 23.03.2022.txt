@@ -1,0 +1,88 @@
+ATIVIDADE 23.03.2022 - PROGRAMAÇÃO SEQUENCIAL
+
+EXERCÍCIO 2:
+
+programa
+{
+	inclua biblioteca Matematica
+	
+	funcao inicio()
+	{
+		inteiro totalDias, idadeAnos, idadeMeses
+
+		escreva("Digite quantos dias: ")
+		leia(totalDias)
+
+		idadeAnos = totalDias/365
+		idadeMeses = (totalDias - (365*idadeAnos))/30
+		totalDias = (totalDias - (365*idadeAnos))%30
+
+		escreva("Voce viveu ", idadeAnos," anos, ",idadeMeses, " meses e ",totalDias, " dias.")	
+	}
+}
+
+
+EXERCÍCIO 3:
+
+programa
+{
+	inclua biblioteca Matematica
+	
+	funcao inicio()
+	{
+	inteiro emSegundos, horas, minutos, tempo
+
+		escreva("Escreva o tempo em segundos: ")
+		leia(tempo)
+
+		horas = tempo/3600
+		minutos = (tempo/60)%60
+		emSegundos = tempo%60
+
+		escreva("O tempo que decorreu foi: ", horas, " horas, ", minutos, " minutos e ", emSegundos, " segundos.")
+	}
+}
+
+
+EXERCÍCIO 5:
+
+programa
+{
+	inclua biblioteca Matematica
+	
+	funcao inicio()
+	{
+	inteiro emSegundos, horas, minutos, tempo
+
+		escreva("Escreva o tempo em segundos: ")
+		leia(tempo)
+
+		horas = tempo/3600
+		minutos = (tempo/60)%60
+		emSegundos = tempo%60
+
+		escreva("O tempo que decorreu foi: ", horas, " horas, ", minutos, " minutos e ", emSegundos, " segundos.")
+	}
+}
+
+
+EXERCÍCIO 8:
+
+programa
+{
+	
+	funcao inicio()
+	{
+	real fabricaCarro, custoDistri, imposto, custoConsum
+
+	escreva("Digite o custo de fábrica do carro: ")
+	leia(fabricaCarro)
+
+	custoDistri = fabricaCarro/100*28
+	imposto = fabricaCarro/100*45
+	custoConsum = fabricaCarro + custoDistri + imposto
+
+	escreva("O valor que o carro será vendido é de R$ "+ custoConsum + ".")
+
+	}
+}
